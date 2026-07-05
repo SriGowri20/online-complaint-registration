@@ -12,7 +12,7 @@ function HomePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/complaints/my', {
+        const res = await axios.get('https://online-complaint-registration-5wif.onrender.com/api/complaints/my', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setComplaints(res.data.complaints);

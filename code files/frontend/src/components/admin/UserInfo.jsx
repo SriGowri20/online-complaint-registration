@@ -8,7 +8,7 @@ function UserInfo({ token }) {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/admin/users', {
+        const res = await axios.get('https://online-complaint-registration-5wif.onrender.com/api/admin/users', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUsers(res.data);
@@ -22,7 +22,7 @@ function UserInfo({ token }) {
   const deleteUser = async (id) => {
     if (!window.confirm('Remove this user?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/users/${id}`, {
+      await axios.delete(`https://online-complaint-registration-5wif.onrender.com/api/admin/users/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(users.filter(u => u._id !== id));

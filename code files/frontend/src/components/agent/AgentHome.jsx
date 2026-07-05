@@ -14,7 +14,7 @@ function AgentHome() {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/complaints/assigned', {
+        const res = await axios.get('https://online-complaint-registration-5wif.onrender.com/api/complaints/assigned', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setComplaints(res.data.complaints);
@@ -29,7 +29,7 @@ function AgentHome() {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/complaints/${id}/status`,
+        `https://online-complaint-registration-5wif.onrender.com/api/complaints/${id}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );

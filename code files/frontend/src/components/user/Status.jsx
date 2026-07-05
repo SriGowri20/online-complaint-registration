@@ -16,7 +16,7 @@ function Status() {
     const fetchComplaint = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/complaints/${complaintId}`,
+          `https://online-complaint-registration-5wif.onrender.com/api/complaints/${complaintId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setComplaint(res.data);

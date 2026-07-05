@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      const res = await axios.post('https://online-complaint-registration-5wif.onrender.com/api/auth/login', form);
       const { token, role } = res.data;
       localStorage.setItem('token', token);
       localStorage.setItem('role', role);

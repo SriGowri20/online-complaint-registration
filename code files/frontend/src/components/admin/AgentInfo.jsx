@@ -7,7 +7,7 @@ function AgentInfo({ token }) {
   useEffect(() => {
     const fetchAgents = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/admin/agents', {
+        const res = await axios.get('https://online-complaint-registration-5wif.onrender.com/api/admin/agents', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setAgents(res.data);
@@ -21,7 +21,7 @@ function AgentInfo({ token }) {
   const deleteAgent = async (id) => {
     if (!window.confirm('Remove this agent?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/agents/${id}`, {
+      await axios.delete(`https://online-complaint-registration-5wif.onrender.com/api/admin/agents/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setAgents(agents.filter(a => a._id !== id));

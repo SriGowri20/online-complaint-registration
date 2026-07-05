@@ -18,7 +18,7 @@ function AdminHome() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/admin/dashboard', {
+        const res = await axios.get('https://online-complaint-registration-5wif.onrender.com/api/admin/dashboard', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setStats(res.data.stats);
@@ -33,7 +33,7 @@ function AdminHome() {
   const assignAgent = async (complaintId, agentId) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/assign`,
+        `https://online-complaint-registration-5wif.onrender.com/api/admin/assign`,
         { complaintId, agentId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

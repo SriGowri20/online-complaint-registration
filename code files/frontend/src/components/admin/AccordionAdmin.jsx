@@ -9,7 +9,7 @@ function AccordionAdmin({ complaint, onAssign, token }) {
   useEffect(() => {
     const fetchAgents = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/admin/agents', {
+        const res = await axios.get('https://online-complaint-registration-5wif.onrender.com/api/admin/agents', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setAgents(res.data);

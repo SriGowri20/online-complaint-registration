@@ -29,7 +29,7 @@ function Complaint() {
       Object.keys(form).forEach(k => formData.append(k, form[k]));
       if (file) formData.append('attachment', file);
 
-      await axios.post('http://localhost:5000/api/complaints', formData, {
+      await axios.post('https://online-complaint-registration-5wif.onrender.com/api/complaints', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

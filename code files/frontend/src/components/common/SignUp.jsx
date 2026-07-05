@@ -16,7 +16,7 @@ function SignUp() {
     e.preventDefault();
     setError('');
     try {
-      await axios.post('http://localhost:5000/api/auth/register', form);
+      await axios.post('https://online-complaint-registration-5wif.onrender.com/api/auth/register', form);
       setSuccess('Account created! Redirecting to login...');
       setTimeout(() => navigate('/login'), 2000);
     } catch (err) {
