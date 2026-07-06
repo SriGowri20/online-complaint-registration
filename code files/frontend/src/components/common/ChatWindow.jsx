@@ -7,6 +7,7 @@ function ChatWindow({ complaintId }) {
   const bottomRef = useRef(null);
   const token = localStorage.getItem('token');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchMessages = async () => {
       try {

@@ -9,6 +9,7 @@ function HomePage() {
   const [name, setName] = useState('');
   const token = localStorage.getItem('token');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchData = async () => {
       try {

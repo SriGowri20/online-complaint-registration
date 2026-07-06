@@ -12,6 +12,7 @@ function Status() {
   const complaintId = location.state?.complaintId;
   const token = localStorage.getItem('token');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchComplaint = async () => {
       try {

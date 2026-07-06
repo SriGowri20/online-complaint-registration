@@ -11,6 +11,7 @@ function AgentHome() {
   const [agentName, setAgentName] = useState('');
   const token = localStorage.getItem('token');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
